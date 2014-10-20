@@ -1,0 +1,3 @@
+AddHandler cgi-script .mw
+Options +ExecCGI
+DirectoryIndex index.mw

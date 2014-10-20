@@ -1,0 +1,202 @@
+<% c++ #include "tests/tc_test_content.h" %>
+<% skin tc_skin %>
+<% view test_default_master uses data::master %>
+<% template render() %>c<% end template %>
+<% end view %>
+<% view view_y uses data::master %>
+<% template render() %>view y<% end template %>
+<% end view %>
+<% view view_x uses data::master %>
+<% template render() %>view x<% end template %>
+<% end view %>
+<% view master uses data::master %>
+<% template render() %>
+TBD
+<% end template %>
+<% end view %>
+
+<% view master_tmpl uses data::master %>
+<% template a() %>A<% end %>
+<% template b(int x) %>x=<%= x %><% end %>
+<% template c(int x,std::string const &y) %>x=<%=x%> y=<%=y%><% end %>
+<% template d(int x,int y) %>x=<%= x %> r=<%= y %><% end %>
+<% template render() %>
+<% include a() %>
+<% include b(10) %>
+<% include b(integer) %>
+<% include c(10,"test") %>
+<% include c(integer,text) %>
+<% end template %>
+<% end view %>
+<% view foreach_tmpl uses data::master %>
+<% template auto_test() %>
+<% c++ #ifdef __GNUC__ %>
+<% foreach x in integers %><% item %><%= x %><% end %><%end%>
+<% foreach x reverse in integers %><% item %><%= x %><% end %><%end%>
+<% c++ #endif %>
+<% end template %>
+<% template render() %><% c++ typedef data::master::integers_type::iterator it; typedef data::master::integers_type::reverse_iterator rit;  %>
+<% foreach x as it in integers %>{<% separator %>,<% item %><%= x %><% end %>}<%empty%>-<% end %>
+<% foreach x as rit reverse in integers %>{<% separator %>,<% item %><%= x %><% end %>}<%empty%>-<% end %>
+<% foreach x as it rowid y in integers %>{<% separator %>,<% item %><%= x %> <%= y %><% end %>}<%empty%>-<% end %>
+<% foreach x as rit rowid y reverse in integers %>{<% separator %>,<% item %><%= x %> <%= y %><% end %>}<%empty%>-<% end %>
+<% foreach x as it rowid y from 1 in integers %>{<% separator %>,<% item %><%= x %> <%= y %><% end %>}<%empty%>-<% end %>
+<% foreach x as rit rowid y from 1 reverse in integers %>{<% separator %>,<% item %><%= x %> <%= y %><% end %>}<%empty%>-<% end %>
+
+<% foreach x as it in integers %>{<% item %> <%= x %><% end %>}<%empty%>-<% end %>
+<% foreach x as rit reverse in integers %>{<% item %> <%= x %><% end %>}<%empty%>-<% end %>
+<% foreach x as it rowid y in integers %>{<% item %> <%= x %> <%= y %><% end %>}<%empty%>-<% end %>
+<% foreach x as rit rowid y reverse in integers %>{<% item %> <%= x %> <%= y %><% end %>}<%empty%>-<% end %>
+<% foreach x as it rowid y from 1 in integers %>{<% item %> <%= x %> <%= y %><% end %>}<%empty%>-<% end %>
+<% foreach x as rit rowid y from 1 reverse in integers %>{<% item %> <%= x %> <%= y %><% end %>}<%empty%>-<% end %>
+
+<% foreach x as it in integers %>{<% separator %>,<% item %><%= x %><% end %>}<% end %>
+<% foreach x as rit reverse in integers %>{<% separator %>,<% item %><%= x %><% end %>}<% end %>
+<% foreach x as it rowid y in integers %>{<% separator %>,<% item %><%= x %> <%= y %><% end %>}<% end %>
+<% foreach x as rit rowid y reverse in integers %>{<% separator %>,<% item %><%= x %> <%= y %><% end %>}<% end %>
+<% foreach x as it rowid y from 1 in integers %>{<% separator %>,<% item %><%= x %> <%= y %><% end %>}<% end %>
+<% foreach x as rit rowid y from 1 reverse in integers %>{<% separator %>,<% item %><%= x %> <%= y %><% end %>}<% end %>
+
+<% foreach x as it in integers %>{<% item %> <%= x %><% end %>}<% end %>
+<% foreach x as rit reverse in integers %>{<% item %> <%= x %><% end %>}<% end %>
+<% foreach x as it rowid y in integers %>{<% item %> <%= x %> <%= y %><% end %>}<% end %>
+<% foreach x as rit rowid y reverse in integers %>{<% item %> <%= x %> <%= y %><% end %>}<% end %>
+<% foreach x as it rowid y from 1 in integers %>{<% item %> <%= x %> <%= y %><% end %>}<% end %>
+<% foreach x as rit rowid y from 1 reverse in integers %>{<% item %> <%= x %> <%= y %><% end %>}<% end %>
+<% end %>
+<% end view %>
+<% view master_if uses data::master %>
+<% template render() %>
+<% if integer %>integer<%else%>!integer<% end %>
+<% if not integer %>!integer<%else%>!!integer<% end %>
+<% if empty text %>text empty<% else %>text not empty<% end %>
+<% if not empty text %>!text empty<% else %>!!text not empty<% end %>
+<% if (true) %>true<%end%>
+<% if (false) %>false<%end%>
+<% if (false) %>false<% elif (true) %>true<%end%>
+<% end template %>
+<% end view %>
+
+<% view master_url uses data::master %>
+<% template render () %>
+<% url "." %>
+<% url "." using integer %>
+<% url "." using integer,text %>
+<% url "/" using integer %>
+<% url "/" using integer,text %>
+<% url "/" using integer,text | raw %>
+<% url "/foo" %>
+<% end %>
+<% end view %>
+
+<% view master_filter uses data::master %>
+<% template render() %>
+<%= integer %>
+<% gt "{1,w=3}" using integer %>
+<% gt "{1,w=3} {2}" using integer , text %>
+<% gt "{1}" using text | raw %>
+<% gt "{1}" using text | ext test_filter %>
+<% gt "{1}" using text | ext test_filter | escape %>
+<% gt "{1} {2}" using text | ext test_filter | escape , integer %>
+<%=text %>
+<%=text | raw %>
+<%=text | ext test_filter %>
+<%=text | ext test_filter | escape %>
+<%=text | urlencode %>
+<%=text | base64_urlencode %>
+<% end %>
+<% end view %>
+
+<% view form_test uses data::form_test %>
+<% template render() %>
+<% form as_p f %>
+<% form input t1 %>
+<% form input t2 %>
+<% form begin t2 %> prop <% form end t2 %>
+<% form block t2 %> id='x' <% end form %>
+<% end template %>
+<% end %>
+
+<% view cache_test uses data::master %>
+<% template render() %><% cache "key" for 2 on miss call() %><%= integer %><% trigger "tr" %><% end cache %><% end template %>
+<% end %>
+<% view cache_test_nr uses data::master %>
+<% template render() %><% cache "key" for 2 no recording %><%= integer %><% trigger "tr" %><% end cache %><% end template %>
+<% end %>
+<% view cache_test_nt uses data::master %>
+<% template render() %><% cache "key" for 2 no triggers %><%= integer %><% end cache %><% end template %>
+<% end %>
+
+<% view helper_helper uses data::helper %>
+<% template show_x() %><%= x %><% c++ content.app(); %><% end %>
+<% template show_y() %><%= y %><% end %>
+<% template show_x(int z) %><%= x %>; <%= z %><% end %>
+<% template show_y(int z) %><%= y %>; <%= z %><% end %>
+<% template render() %>r <%=x %>; <%= y %><% end %>
+<% end %>
+
+<% view helper_master uses data::master %>
+<% template show_integer() %>i <%= integer %><% end template %>
+<% template render() %>ri <%= integer %><% end template %>
+<% end view %>
+
+<% view test_using uses data::master %>
+<% template compilation() %>
+<% render text %>
+<% render text with h%>
+<% render text,text %>
+<% render text,text with h %>
+
+<% render "text" %>
+<% render "text" with h%>
+<% render "text","text" %>
+<% render "text","text" with h %>
+
+<% render "text",text with h %>
+<% render text,"text" with h %>
+<% render "text",text %>
+<% render text,"text" %>
+
+<% render "text" ,text with h %>
+<% render text ,"text" with h %>
+<% render "text" ,text %>
+<% render text ,"text" %>
+
+<% render "text" , text with h %>
+<% render text , "text" with h %>
+<% render "text" , text %>
+<% render text , "text" %>
+
+<% render "text", text with h %>
+<% render text, "text" with h %>
+<% render "text", text %>
+<% render text, "text" %>
+
+
+
+<% end template %>
+<% template render() %>
+<% render "tc_skin", "helper_helper" with h %>
+<% render "tc_skin", "helper_master" %>
+<% render "helper_helper" with h %>
+<% render text with h %>
+<% render "helper_master" %>
+<% using helper_helper with h as hlp %>
+<% include show_x() from hlp %>
+<% include show_y() from hlp %>
+<% include show_x(h.y) from hlp %>
+<% include show_y(h.x) from hlp %>
+<% end using %>
+<% using helper_master as hlp %>
+<% include show_integer() from hlp %>
+<% end using %>
+<% include show_x() using helper_helper with h %>
+<% include show_y() using helper_helper with h %>
+<% include show_x(h.y) using helper_helper with h %>
+<% include show_y(h.x) using helper_helper with h %>
+<% include show_integer() using helper_master %>
+<% end %>
+<% end %>
+
+
+<% end skin %>

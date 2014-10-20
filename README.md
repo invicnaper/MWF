@@ -16,6 +16,7 @@ Code Example
 ===
 
 ### Param :
+```c++
     #include "mwf.h"
     int main(){
         Mwu::Frame frame;
@@ -33,6 +34,7 @@ Code Example
         frame.__end();
         return 0;
     }
+```
 this will check if the query string exist and then will print the content of the param "a"
 
 Mwf lib 

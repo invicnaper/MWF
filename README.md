@@ -49,22 +49,22 @@ Documentation
 
 ##Mwu::Frame
 
-⋅⋅*void 	__init (const char *title, const char *description)
-⋅⋅*void 	__load (const char *module)
-⋅⋅*void 	__end ()
+    void 	__init (const char *title, const char *description)
+    void 	__load (const char *module)
+    void 	__end ()
 
 ##Mw::List
 
-⋅⋅*SmwList * 	s_init (SmwList *list)
-⋅⋅*DmwList * 	d_init (DmwList **list)
-⋅⋅*SmwList * 	s_del (SmwList *list)
-⋅⋅*DmwList * 	d_del (DmwList **list)
-⋅⋅*list * 	__sconstruct ()
-⋅⋅*list * 	__dconstruct ()
-⋅⋅*int 	sprint (SmwList *list, char c)
-⋅⋅*int 	dprint (DmwList **list, char *string)
-⋅⋅*int 	sexec (SmwList *list)
-⋅⋅*int 	dexec (DmwList **list)
-⋅⋅*SmwList * 	p_sprint (SmwList *list, char c)
-⋅⋅*DmwList * 	p_dprint (DmwList **list, char *string)
-⋅⋅*SmwList * 	show (SmwList *list)
+    SmwList * 	s_init (SmwList *list)
+    DmwList * 	d_init (DmwList **list)
+    SmwList * 	s_del (SmwList *list)
+    DmwList * 	d_del (DmwList **list)
+    list * 	__sconstruct ()
+    list * 	__dconstruct ()
+    int 	sprint (SmwList *list, char c)
+    int 	dprint (DmwList **list, char *string)
+    int 	sexec (SmwList *list)
+    int 	dexec (DmwList **list)
+    SmwList * 	p_sprint (SmwList *list, char c)
+    DmwList * 	p_dprint (DmwList **list, char *string)
+    SmwList * 	show (SmwList *list)

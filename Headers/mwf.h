@@ -67,7 +67,7 @@ Version".
 
 typedef struct Mw_list{
 	char c; 						/* this simple list will contain just caracters */
-	struct Mw_list *p_sv; 			/*  next ptr */
+	struct Mw_list *p_sv; 			/* next ptr */
 
 }SmwList;
 /* double list structure */ 

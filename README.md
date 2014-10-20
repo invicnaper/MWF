@@ -68,3 +68,46 @@ Documentation
     SmwList * 	p_sprint (SmwList *list, char c)
     DmwList * 	p_dprint (DmwList **list, char *string)
     SmwList * 	show (SmwList *list)
+
+##Mw::Html
+
+    void 	link (const char *string, const char *href, const char *style)
+    void 	p (const char *string, const char *style)
+    void 	h (const char *string, int type, const char *style)
+    void 	img (const char *src, int heigh, int width)
+    void 	css_local (const char *file, const char *type)
+    void 	div (const char *style)
+    void 	span (const char *style)
+    void 	ul (const char *style)
+    void 	li (const char *style)
+    void 	code (const char *string, const char *style)
+    void 	js_local (const char *file)
+    void 	css_web (const char *href, const char *type)
+    void 	js_web (const char *href)
+    void 	checkbox (char *string, const char *style)
+    
+##Mw::Methods
+
+    char * 	_GET (char *param)
+    char * 	_POST (const char *param)
+    int 	i_GET (char param[1025])
+    void 	redirect (const char *href)
+    
+##Mw::Time
+    
+    clock_t 	load_page ()
+    clock_t 	load_composent ()
+    clock_t 	load_list (SmwList *list)
+    clock_t 	currentTime ()
+    double 	loadedTime (clock_t start, clock_t end)
+    void 	draw_time (clock_t start, clock_t end, int type)
+
+##Mw::Function
+
+    void 	removeChr (char *str, char c)
+    void 	removeNbr (char *str)
+    void 	getNbr (char *str)
+    void 	removeStr (char *str, const char *r)
+    char * 	parsing_url (char *s, char *param)
+    int 	url_isset ()
+    int 	isset (char *mod)

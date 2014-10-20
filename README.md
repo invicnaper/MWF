@@ -50,13 +50,13 @@ Documentation
 ===
 
 ##Mwu::Frame
-
+```c
     void 	__init (const char *title, const char *description)
     void 	__load (const char *module)
     void 	__end ()
-
+```
 ##Mw::List
-
+```c
     SmwList * 	s_init (SmwList *list)
     DmwList * 	d_init (DmwList **list)
     SmwList * 	s_del (SmwList *list)
@@ -70,9 +70,9 @@ Documentation
     SmwList * 	p_sprint (SmwList *list, char c)
     DmwList * 	p_dprint (DmwList **list, char *string)
     SmwList * 	show (SmwList *list)
-
+```
 ##Mw::Html
-
+```c
     void 	link (const char *string, const char *href, const char *style)
     void 	p (const char *string, const char *style)
     void 	h (const char *string, int type, const char *style)
@@ -87,25 +87,25 @@ Documentation
     void 	css_web (const char *href, const char *type)
     void 	js_web (const char *href)
     void 	checkbox (char *string, const char *style)
-    
+```    
 ##Mw::Methods
-
+```c
     char * 	_GET (char *param)
     char * 	_POST (const char *param)
     int 	i_GET (char param[1025])
     void 	redirect (const char *href)
-    
+```    
 ##Mw::Time
-    
+```c    
     clock_t 	load_page ()
     clock_t 	load_composent ()
     clock_t 	load_list (SmwList *list)
     clock_t 	currentTime ()
     double 	loadedTime (clock_t start, clock_t end)
     void 	draw_time (clock_t start, clock_t end, int type)
-
+```
 ##Mw::Function
-
+```c
     void 	removeChr (char *str, char c)
     void 	removeNbr (char *str)
     void 	getNbr (char *str)
@@ -113,3 +113,4 @@ Documentation
     char * 	parsing_url (char *s, char *param)
     int 	url_isset ()
     int 	isset (char *mod)
+```

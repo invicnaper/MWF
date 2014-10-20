@@ -1,0 +1,25 @@
+ _   _  _ _ _  ___ 
+| \_/ || | | || __|
+| \_/ || V V || _| 
+|_| |_| \_n_/ |_|  
+
+@author : naper
+@description : c++ web framework
+
+[Changelog]
+
+
+
+|Unknown Date|:
+
+-adding error handling
+-support many CGI lib
+-support template files (xml or css);
+-Adding time function
+-Adding simple and double link list , for advanced function and more performance
+-Adding _GET and _POST methods(like in php)
+-Adding html content with multiple function
+-Adding frame module , (__init , __end)
+-Supporting local and web css inclusion
+-Adding some util function
+-CGI lib , you can use some function of this later.

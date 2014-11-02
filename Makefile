@@ -25,22 +25,22 @@ help:
 compil: compilmsg
 compilmsg:
 	@echo ===================[Compiling MWF]===================
-	gcc -c Frame/mwf.cpp -o mwf.o
-	gcc -c Utils/utils.cpp -o utils.o
-	gcc -c Template/template.cpp -o template.o 
-	gcc -c Utils/time.cpp -o time.o
-	gcc -c Utils/function.cpp -o function.o 
-	gcc -c Utils/ccgi.cpp -o libcgi.o
-	#gcc -c Utils/cgic-lib.cpp -o cgi.o
+	g++ -c Frame/mwf.cpp -o mwf.o
+	g++ -c Utils/utils.cpp -o utils.o
+	g++ -c Template/template.cpp -o template.o 
+	g++ -c Utils/time.cpp -o time.o
+	g++ -c Utils/function.cpp -o function.o 
+	g++ -c Utils/ccgi.cpp -o libcgi.o
+	#g++ -c Utils/cgic-lib.cpp -o cgi.o
 	@echo ===================[Finished]===================
 compil-c++11:
 compil-c++11msg:
-	gcc -c Frame/mwf.cpp -o mwf.o -std=c++11
-	gcc -c Utils/utils.cpp -o utils.o -std=c++11
-	gcc -c Template/template.cpp -o template.o -std=c++11
-	gcc -c Utils/time.cpp -o time.o -std=c++11
-	gcc -c Utils/function.cpp -o function.o -std=c++11
-	#gcc -c Utils/cgic-lib.cpp -o cgi.o
+	g++ -c Frame/mwf.cpp -o mwf.o -std=c++11
+	g++ -c Utils/utils.cpp -o utils.o -std=c++11
+	g++ -c Template/template.cpp -o template.o -std=c++11
+	g++ -c Utils/time.cpp -o time.o -std=c++11
+	g++ -c Utils/function.cpp -o function.o -std=c++11
+	#g++ -c Utils/cgic-lib.cpp -o cgi.o
 	@echo ===================[Finished]===================
 link: linkmsg
 linkmsg:

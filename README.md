@@ -3,6 +3,8 @@
 MWF
 ===
 
+[![Build Status](https://travis-ci.org/invicnaper/MWF.svg?branch=master)](https://travis-ci.org/invicnaper/MWF)
+
 MWF is a web framework written in C++
 
 Github page ==> [link](http://invicnaper.github.io/MWF/)

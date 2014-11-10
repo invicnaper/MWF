@@ -1,0 +1,21 @@
+Content-Type: text/html;
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+	<head>		<title>MWF | c++ web framework</title>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	</head>
+	<body><link rel='stylesheet' type = 'text/css'  href = 'http://naper.eu/projects/data/_cache/combined_1vmd4qgncexel2o9m1hi9cff.css'></link><div class='navbar navbar-inverse navbar-fixed-top'> <div class='navbar-inner'><div class='container'><button type='button' class='btn btn-navbar' data-toggle='collapse' data-target='.nav-collapse'><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a href='/projects/index.php/' class='brand' title='Naper :$ Projects'>MWF Framework</a>					<div class='nav-collapse collapse'><div class='gpArea_Menu GPAREA'><ul class='nav'><li class='active'><a href='#' title='Home'>Home</a></li><li><a href='#' title='blog'>blog</a></li><li><a href='#' title='More'>More</a></li></ul></div>					</div><!--/.nav-collapse --></div></div></div><div class='container'><h3>Header type 3</h3><p>Hello test</p><a href='http://www.naper.eu'>This is a link</a><p></p><p>code : </p><p><code>Mwu::Frame frame; // init frame</code></p><p><code>Mwu::Html html; // init html</code></p><p><code>html.p('Simple text',NULL);</code></p><div class='alert alert-danger'>
+<b>[Error]</b> : Error with QUERY_STRING , Please check . <a href='query_string' class='alert-link'>query_string</a></div>
+a = 134546240
+</div>	</body>
+</html><p>page loaded in : </p>0.000203sContent-Type: text/html;
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+	<head>		<title>MWF | c++ web framework</title>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	</head>
+	<body><link rel='stylesheet' type = 'text/css'  href = 'http://naper.eu/projects/data/_cache/combined_1vmd4qgncexel2o9m1hi9cff.css'></link><div class='navbar navbar-inverse navbar-fixed-top'> <div class='navbar-inner'><div class='container'><button type='button' class='btn btn-navbar' data-toggle='collapse' data-target='.nav-collapse'><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span></button><a href='/projects/index.php/' class='brand' title='Naper :$ Projects'>MWF Framework</a>					<div class='nav-collapse collapse'><div class='gpArea_Menu GPAREA'><ul class='nav'><li class='active'><a href='#' title='Home'>Home</a></li><li><a href='#' title='blog'>blog</a></li><li><a href='#' title='More'>More</a></li></ul></div>					</div><!--/.nav-collapse --></div></div></div><div class='container'><h3>Header type 3</h3><p>Hello test</p><a href='http://www.naper.eu'>This is a link</a><p></p><p>code : </p><p><code>Mwu::Frame frame; // init frame</code></p><p><code>Mwu::Html html; // init html</code></p><p><code>html.p('Simple text',NULL);</code></p><div class='alert alert-danger'>
+<b>[Error]</b> : Error with QUERY_STRING , Please check . <a href='query_string' class='alert-link'>query_string</a></div>
+a = 134546240
+</div>	</body>
+</html><p>page loaded in : </p>0.000180s

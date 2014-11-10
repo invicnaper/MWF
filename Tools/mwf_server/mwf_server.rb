@@ -67,9 +67,6 @@ CONTENT_TYPE_MAPPING = {
 # Treat as binary data if content type cannot be found
 DEFAULT_CONTENT_TYPE = 'application/octet-stream'
 
-# This helper function parses the extension of the
-# requested file and then looks up its content type.
-
 def content_type(path)
   ext = File.extname(path).split(".").last
   CONTENT_TYPE_MAPPING.fetch(ext, DEFAULT_CONTENT_TYPE)
@@ -91,19 +88,12 @@ def requested_file(request_line)
     # skip any empty or current directory (".") path components
     next if part.empty? || part == '.'
     # If the path component goes up one directory level (".."),
-    # remove the last clean component.
-    # Otherwise, add the component to the Array of clean components
     part == '..' ? clean.pop : clean << part
   end
 
   # return the web root joined to the clean path
   File.join(WEB_ROOT, *clean)
 end
-
-# Except where noted below, the general approach of
-# handling requests and generating responses is
-# similar to that of the "Hello World" example
-# shown earlier.
 
 Console.header()
 Console.print_action("Starting web server in #{IP_SERVER}:#{PORT_SERVER}")
@@ -120,8 +110,6 @@ loop do
   path = requested_file(request_line)
   path = File.join(path, 'index.html') if File.directory?(path)
 
-  # Make sure the file exists and is not a directory
-  # before attempting to open it.
   if File.exist?(path) && !File.directory?(path)
     Console.print_action("Opening #{path}")
     if(File.extname(path) == ".mw")

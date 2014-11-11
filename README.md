@@ -1,9 +1,7 @@
-[![GitHub version](https://badge.fury.io/gh/invicnaper%2FMWF.svg)](http://badge.fury.io/gh/invicnaper%2FMWF)
+MWF  [![GitHub version](https://badge.fury.io/gh/invicnaper%2FMWF.svg)](http://badge.fury.io/gh/invicnaper%2FMWF) [![Code Climate](https://codeclimate.com/github/invicnaper/MWF/badges/gpa.svg)](https://codeclimate.com/github/invicnaper/MWF)
+===
 
 ![alt text](https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-06-128.png "mwf logo")
-
-MWF
-===
 
 MWF is a web framework written in C++
 

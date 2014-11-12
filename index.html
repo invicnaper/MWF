@@ -1,48 +1,57 @@
 <!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Mwf by invicnaper</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Mwf</h1>
-        <p>MWF is a web framework written in C++</p>
-        <p class="view"><a href="https://github.com/invicnaper/MWF">View the Project on GitHub <small>invicnaper/MWF</small></a></p>
-        <ul>
-          <li><a href="https://github.com/invicnaper/MWF/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/invicnaper/MWF/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/invicnaper/MWF">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p><img src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-06-128.png" alt="alt text" title="mwf logo"></p>
+  <title>Mwf</title>
+  <meta name="description" content="MWF is a web framework written in C++">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Mwf</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">MWF is a web framework written in C++</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/invicnaper/MWF/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/invicnaper/MWF/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/invicnaper/MWF" class="code">View Mwf on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <p><img src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-06-128.png" alt="alt text" title="mwf logo"></p>
 
 <h1>
-<a name="mwf" class="anchor" href="#mwf"><span class="octicon octicon-link"></span></a>MWF</h1>
+<a id="mwf" class="anchor" href="#mwf" aria-hidden="true"><span class="octicon octicon-link"></span></a>MWF</h1>
 
 <p>MWF is a web framework written in C++</p>
 
 <h1>
-<a name="screen" class="anchor" href="#screen"><span class="octicon octicon-link"></span></a>Screen</h1>
+<a id="screen" class="anchor" href="#screen" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screen</h1>
 
 <p><img src="http://naper.eu/blog/content/public/upload/time_0_o.png" alt="alt text"><img src="http://naper.eu/blog/content/public/upload/screen_0_o.png" alt="alt text"></p>
 
 <hr>
 
 <h1>
-<a name="source-code" class="anchor" href="#source-code"><span class="octicon octicon-link"></span></a>Source code</h1>
+<a id="source-code" class="anchor" href="#source-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source code</h1>
 
 <p>Download the source code and than build them using :</p>
 
@@ -50,131 +59,137 @@
 </code></pre>
 
 <h1>
-<a name="code-example" class="anchor" href="#code-example"><span class="octicon octicon-link"></span></a>Code Example</h1>
+<a id="code-example" class="anchor" href="#code-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Example</h1>
 
 <h3>
-<a name="param-" class="anchor" href="#param-"><span class="octicon octicon-link"></span></a>Param :</h3>
+<a id="param-" class="anchor" href="#param-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Param :</h3>
 
-<div class="highlight highlight-c++"><pre><span class="cp">    #include "mwf.h"</span>
-    <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-        <span class="n">Mwu</span><span class="o">::</span><span class="n">Frame</span> <span class="n">frame</span><span class="p">;</span>
-        <span class="n">Mw</span><span class="o">::</span><span class="n">Html</span> <span class="n">html</span><span class="p">;</span>
-        <span class="n">Mw</span><span class="o">::</span><span class="n">Methods</span> <span class="n">m</span><span class="p">;</span>
-        <span class="n">Mw</span><span class="o">::</span><span class="n">Function</span> <span class="n">funct</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">a</span> <span class="p">;</span>
-        <span class="n">frame</span><span class="p">.</span><span class="n">__init</span><span class="p">(</span><span class="s">"Param testing"</span><span class="p">,</span><span class="s">"Description"</span><span class="p">);</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">funct</span><span class="p">.</span><span class="n">url_isset</span><span class="p">()){</span>
-                <span class="n">a</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">i_GET</span><span class="p">(</span><span class="s">"a"</span><span class="p">);</span>
-                <span class="n">print</span> <span class="o">&lt;&lt;</span> <span class="s">"a = "</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="p">;</span> 
-        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                <span class="n">print</span> <span class="o">&lt;&lt;</span> <span class="s">"&lt;b&gt;no param&lt;/b&gt;"</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="n">frame</span><span class="p">.</span><span class="n">__end</span><span class="p">();</span>
-        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="p">}</span>
-</pre></div>
+<div class="highlight highlight-c++"><pre>    #<span class="pl-k">include</span> <span class="pl-s1"><span class="pl-pds">"</span>mwf.h<span class="pl-pds">"</span></span>
+    <span class="pl-s">int</span> <span class="pl-enf">main</span>(){
+        Mwu::Frame frame;
+        Mw::Html html;
+        Mw::Methods m;
+        Mw::Function funct;
+        <span class="pl-s">int</span> a ;
+        frame.<span class="pl-sf">__init</span>(<span class="pl-s1"><span class="pl-pds">"</span>Param testing<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>Description<span class="pl-pds">"</span></span>);
+        <span class="pl-k">if</span>(funct.<span class="pl-sf">url_isset</span>()){
+                a = m.<span class="pl-sf">i_GET</span>(<span class="pl-s1"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>);
+                print &lt;&lt; <span class="pl-s1"><span class="pl-pds">"</span>a = <span class="pl-pds">"</span></span> &lt;&lt; a ; 
+        }<span class="pl-k">else</span>{
+                print &lt;&lt; <span class="pl-s1"><span class="pl-pds">"</span>&lt;b&gt;no param&lt;/b&gt;<span class="pl-pds">"</span></span>;
+        }
+        frame.<span class="pl-sf">__end</span>();
+        <span class="pl-k">return</span> <span class="pl-cn">0</span>;
+    }</pre></div>
 
 <p>this will check if the query string exist and then will print the content of the param "a"</p>
 
 <h1>
-<a name="mwf-lib-" class="anchor" href="#mwf-lib-"><span class="octicon octicon-link"></span></a>Mwf lib </h1>
+<a id="mwf-lib-" class="anchor" href="#mwf-lib-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mwf lib </h1>
 
 <h3>
-<a name="linux-" class="anchor" href="#linux-"><span class="octicon octicon-link"></span></a>Linux :</h3>
+<a id="linux-" class="anchor" href="#linux-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linux :</h3>
 
 <p>you can download the .deb package or the mwf installer in <a href="https://www.naper.eu">libmwflin</a></p>
 
 <h3>
-<a name="windows-" class="anchor" href="#windows-"><span class="octicon octicon-link"></span></a>Windows :</h3>
+<a id="windows-" class="anchor" href="#windows-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows :</h3>
 
 <p>soon</p>
 
 <h1>
-<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h1>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h1>
 
 <h2>
-<a name="mwuframe" class="anchor" href="#mwuframe"><span class="octicon octicon-link"></span></a>Mwu::Frame</h2>
+<a id="mwuframe" class="anchor" href="#mwuframe" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mwu::Frame</h2>
 
-<div class="highlight highlight-c"><pre>    <span class="kt">void</span>    <span class="n">__init</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">title</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">description</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">__load</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">module</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">__end</span> <span class="p">()</span>
-</pre></div>
-
-<h2>
-<a name="mwlist" class="anchor" href="#mwlist"><span class="octicon octicon-link"></span></a>Mw::List</h2>
-
-<div class="highlight highlight-c"><pre>    <span class="n">SmwList</span> <span class="o">*</span>   <span class="n">s_init</span> <span class="p">(</span><span class="n">SmwList</span> <span class="o">*</span><span class="n">list</span><span class="p">)</span>
-    <span class="n">DmwList</span> <span class="o">*</span>   <span class="n">d_init</span> <span class="p">(</span><span class="n">DmwList</span> <span class="o">**</span><span class="n">list</span><span class="p">)</span>
-    <span class="n">SmwList</span> <span class="o">*</span>   <span class="n">s_del</span> <span class="p">(</span><span class="n">SmwList</span> <span class="o">*</span><span class="n">list</span><span class="p">)</span>
-    <span class="n">DmwList</span> <span class="o">*</span>   <span class="n">d_del</span> <span class="p">(</span><span class="n">DmwList</span> <span class="o">**</span><span class="n">list</span><span class="p">)</span>
-    <span class="n">list</span> <span class="o">*</span>  <span class="n">__sconstruct</span> <span class="p">()</span>
-    <span class="n">list</span> <span class="o">*</span>  <span class="n">__dconstruct</span> <span class="p">()</span>
-    <span class="kt">int</span>     <span class="n">sprint</span> <span class="p">(</span><span class="n">SmwList</span> <span class="o">*</span><span class="n">list</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">)</span>
-    <span class="kt">int</span>     <span class="n">dprint</span> <span class="p">(</span><span class="n">DmwList</span> <span class="o">**</span><span class="n">list</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">)</span>
-    <span class="kt">int</span>     <span class="n">sexec</span> <span class="p">(</span><span class="n">SmwList</span> <span class="o">*</span><span class="n">list</span><span class="p">)</span>
-    <span class="kt">int</span>     <span class="n">dexec</span> <span class="p">(</span><span class="n">DmwList</span> <span class="o">**</span><span class="n">list</span><span class="p">)</span>
-    <span class="n">SmwList</span> <span class="o">*</span>   <span class="n">p_sprint</span> <span class="p">(</span><span class="n">SmwList</span> <span class="o">*</span><span class="n">list</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">)</span>
-    <span class="n">DmwList</span> <span class="o">*</span>   <span class="n">p_dprint</span> <span class="p">(</span><span class="n">DmwList</span> <span class="o">**</span><span class="n">list</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">)</span>
-    <span class="n">SmwList</span> <span class="o">*</span>   <span class="n">show</span> <span class="p">(</span><span class="n">SmwList</span> <span class="o">*</span><span class="n">list</span><span class="p">)</span>
-</pre></div>
+<div class="highlight highlight-c"><pre>    <span class="pl-s">void</span>    <span class="pl-enf">__init</span> (<span class="pl-smc">const</span> <span class="pl-s">char</span> *title, <span class="pl-smc">const</span> <span class="pl-s">char</span> *description)
+    void    __load (<span class="pl-smc">const</span> <span class="pl-s">char</span> *module)
+    void    __end ()</pre></div>
 
 <h2>
-<a name="mwhtml" class="anchor" href="#mwhtml"><span class="octicon octicon-link"></span></a>Mw::Html</h2>
+<a id="mwlist" class="anchor" href="#mwlist" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mw::List</h2>
 
-<div class="highlight highlight-c"><pre>    <span class="kt">void</span>    <span class="n">link</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">href</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">style</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">p</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">style</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">h</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">type</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">style</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">img</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">src</span><span class="p">,</span> <span class="kt">int</span> <span class="n">heigh</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">css_local</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">file</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">type</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">div</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">style</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">span</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">style</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">ul</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">style</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">li</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">style</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">code</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">style</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">js_local</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">file</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">css_web</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">href</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">type</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">js_web</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">href</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">checkbox</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">style</span><span class="p">)</span>
-</pre></div>
+<div class="highlight highlight-c"><pre>    SmwList *   <span class="pl-enf">s_init</span> (SmwList *list)
+    DmwList *   d_init (DmwList **list)
+    SmwList *   s_del (SmwList *list)
+    DmwList *   d_del (DmwList **list)
+    list *  __sconstruct ()
+    list *  __dconstruct ()
+    int     sprint (SmwList *list, <span class="pl-s">char</span> c)
+    int     dprint (DmwList **list, <span class="pl-s">char</span> *string)
+    int     sexec (SmwList *list)
+    int     dexec (DmwList **list)
+    SmwList *   p_sprint (SmwList *list, <span class="pl-s">char</span> c)
+    DmwList *   p_dprint (DmwList **list, <span class="pl-s">char</span> *string)
+    SmwList *   show (SmwList *list)</pre></div>
 
 <h2>
-<a name="mwmethods" class="anchor" href="#mwmethods"><span class="octicon octicon-link"></span></a>Mw::Methods</h2>
+<a id="mwhtml" class="anchor" href="#mwhtml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mw::Html</h2>
 
-<div class="highlight highlight-c"><pre>    <span class="kt">char</span> <span class="o">*</span>  <span class="n">_GET</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">param</span><span class="p">)</span>
-    <span class="kt">char</span> <span class="o">*</span>  <span class="n">_POST</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">param</span><span class="p">)</span>
-    <span class="kt">int</span>     <span class="n">i_GET</span> <span class="p">(</span><span class="kt">char</span> <span class="n">param</span><span class="p">[</span><span class="mi">1025</span><span class="p">])</span>
-    <span class="kt">void</span>    <span class="n">redirect</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">href</span><span class="p">)</span>
-</pre></div>
-
-<h2>
-<a name="mwtime" class="anchor" href="#mwtime"><span class="octicon octicon-link"></span></a>Mw::Time</h2>
-
-<div class="highlight highlight-c"><pre>    <span class="kt">clock_t</span>     <span class="n">load_page</span> <span class="p">()</span>
-    <span class="kt">clock_t</span>     <span class="n">load_composent</span> <span class="p">()</span>
-    <span class="kt">clock_t</span>     <span class="n">load_list</span> <span class="p">(</span><span class="n">SmwList</span> <span class="o">*</span><span class="n">list</span><span class="p">)</span>
-    <span class="kt">clock_t</span>     <span class="n">currentTime</span> <span class="p">()</span>
-    <span class="kt">double</span>  <span class="n">loadedTime</span> <span class="p">(</span><span class="kt">clock_t</span> <span class="n">start</span><span class="p">,</span> <span class="kt">clock_t</span> <span class="n">end</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">draw_time</span> <span class="p">(</span><span class="kt">clock_t</span> <span class="n">start</span><span class="p">,</span> <span class="kt">clock_t</span> <span class="n">end</span><span class="p">,</span> <span class="kt">int</span> <span class="n">type</span><span class="p">)</span>
-</pre></div>
+<div class="highlight highlight-c"><pre>    <span class="pl-s">void</span>    <span class="pl-enf">link</span> (<span class="pl-smc">const</span> <span class="pl-s">char</span> *string, <span class="pl-smc">const</span> <span class="pl-s">char</span> *href, <span class="pl-smc">const</span> <span class="pl-s">char</span> *style)
+    void    p (<span class="pl-smc">const</span> <span class="pl-s">char</span> *string, <span class="pl-smc">const</span> <span class="pl-s">char</span> *style)
+    void    h (<span class="pl-smc">const</span> <span class="pl-s">char</span> *string, <span class="pl-s">int</span> type, <span class="pl-smc">const</span> <span class="pl-s">char</span> *style)
+    void    img (<span class="pl-smc">const</span> <span class="pl-s">char</span> *src, <span class="pl-s">int</span> heigh, <span class="pl-s">int</span> width)
+    void    css_local (<span class="pl-smc">const</span> <span class="pl-s">char</span> *file, <span class="pl-smc">const</span> <span class="pl-s">char</span> *type)
+    void    div (<span class="pl-smc">const</span> <span class="pl-s">char</span> *style)
+    void    span (<span class="pl-smc">const</span> <span class="pl-s">char</span> *style)
+    void    ul (<span class="pl-smc">const</span> <span class="pl-s">char</span> *style)
+    void    li (<span class="pl-smc">const</span> <span class="pl-s">char</span> *style)
+    void    code (<span class="pl-smc">const</span> <span class="pl-s">char</span> *string, <span class="pl-smc">const</span> <span class="pl-s">char</span> *style)
+    void    js_local (<span class="pl-smc">const</span> <span class="pl-s">char</span> *file)
+    void    css_web (<span class="pl-smc">const</span> <span class="pl-s">char</span> *href, <span class="pl-smc">const</span> <span class="pl-s">char</span> *type)
+    void    js_web (<span class="pl-smc">const</span> <span class="pl-s">char</span> *href)
+    void    checkbox (<span class="pl-s">char</span> *string, <span class="pl-smc">const</span> <span class="pl-s">char</span> *style)</pre></div>
 
 <h2>
-<a name="mwfunction" class="anchor" href="#mwfunction"><span class="octicon octicon-link"></span></a>Mw::Function</h2>
+<a id="mwmethods" class="anchor" href="#mwmethods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mw::Methods</h2>
 
-<div class="highlight highlight-c"><pre>    <span class="kt">void</span>    <span class="n">removeChr</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">removeNbr</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">getNbr</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">)</span>
-    <span class="kt">void</span>    <span class="n">removeStr</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">r</span><span class="p">)</span>
-    <span class="kt">char</span> <span class="o">*</span>  <span class="n">parsing_url</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">param</span><span class="p">)</span>
-    <span class="kt">int</span>     <span class="n">url_isset</span> <span class="p">()</span>
-    <span class="kt">int</span>     <span class="n">isset</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">mod</span><span class="p">)</span>
-</pre></div>
-      </section>
+<div class="highlight highlight-c"><pre>    <span class="pl-s">char</span> *  <span class="pl-enf">_GET</span> (<span class="pl-s">char</span> *param)
+    char *  _POST (<span class="pl-smc">const</span> <span class="pl-s">char</span> *param)
+    int     i_GET (<span class="pl-s">char</span> param[<span class="pl-cn">1025</span>])
+    void    redirect (<span class="pl-smc">const</span> <span class="pl-s">char</span> *href)</pre></div>
+
+<h2>
+<a id="mwtime" class="anchor" href="#mwtime" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mw::Time</h2>
+
+<div class="highlight highlight-c"><pre>    <span class="pl-st">clock_t</span>     <span class="pl-enf">load_page</span> ()
+    clock_t     load_composent ()
+    clock_t     load_list (SmwList *list)
+    clock_t     currentTime ()
+    double  loadedTime (<span class="pl-st">clock_t</span> start, <span class="pl-st">clock_t</span> end)
+    void    draw_time (<span class="pl-st">clock_t</span> start, <span class="pl-st">clock_t</span> end, <span class="pl-s">int</span> type)</pre></div>
+
+<h2>
+<a id="mwfunction" class="anchor" href="#mwfunction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mw::Function</h2>
+
+<div class="highlight highlight-c"><pre>    <span class="pl-s">void</span>    <span class="pl-enf">removeChr</span> (<span class="pl-s">char</span> *str, <span class="pl-s">char</span> c)
+    void    removeNbr (<span class="pl-s">char</span> *str)
+    void    getNbr (<span class="pl-s">char</span> *str)
+    void    removeStr (<span class="pl-s">char</span> *str, <span class="pl-smc">const</span> <span class="pl-s">char</span> *r)
+    char *  parsing_url (<span class="pl-s">char</span> *s, <span class="pl-s">char</span> *param)
+    int     url_isset ()
+    int     isset (<span class="pl-s">char</span> *mod)</pre></div>
+        </article>
+      </div>
     </div>
     <footer>
-      <p>Project maintained by <a href="https://github.com/invicnaper">invicnaper</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+      <div class="owner">
+      <p><a href="https://github.com/invicnaper" class="avatar"><img src="https://avatars0.githubusercontent.com/u/6239381?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/invicnaper">invicnaper</a> maintains <a href="https://github.com/invicnaper/MWF">Mwf</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
     </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/invicnaper/MWF/tarball/master" class="tar">tar</a><a href="https://github.com/invicnaper/MWF/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
 </html>

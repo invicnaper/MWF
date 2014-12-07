@@ -1,4 +1,5 @@
 [![GitHub version](https://badge.fury.io/gh/invicnaper%2FMWF.svg)](http://badge.fury.io/gh/invicnaper%2FMWF) [![Code Climate](https://codeclimate.com/github/invicnaper/MWF/badges/gpa.svg)](https://codeclimate.com/github/invicnaper/MWF)
+[ ![Codeship Status for invicnaper/MWF](https://codeship.com/projects/3da6e7c0-6057-0132-46b1-0265a0814e00/status)](https://codeship.com/projects/51621)
 MWF 
 ===
 

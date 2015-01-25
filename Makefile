@@ -45,5 +45,6 @@ compil-c++11msg:
 link: linkmsg
 linkmsg:
 	@echo ===================[Compiling MWF]===================
-	ar -q libmwflin.a mwf.o utils.o template.o time.o cgi.o function.o libcgi.o
+	#add cgi.o if you have it :p
+	ar -q libmwflin.a mwf.o utils.o template.o time.o function.o libcgi.o
 	@echo ===================[Finished]===================

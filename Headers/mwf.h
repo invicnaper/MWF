@@ -53,12 +53,20 @@ Version".
 #define WARNNING 2
 #define SUCCESS 3
 #define INFO 4
+#define XSS "XSS_ENABLED"
 
 /* const for time */
 
 #define SECOND 5
 #define MSECOND 6
 #define MINUTES 7
+
+/* const for _SERVER function */
+
+#define SERVER_NAME getenv("SERVER_NAME");
+#define SERVER_SOFTWARE getenv("SERVER_SOFTWARE");
+#define SCRIPT_FILENAME getenv("SCRIPT_FILENAME");
+#define SCRIPT_NAME getenv("SCRIPT_NAME");
 
 #define print std::cout
 
@@ -90,7 +98,7 @@ namespace Mw{
 	{
 		public:
 			int write(const char* string, ...);
-			void error(const char* string,const char* ref);
+			void error(const char* string,const char* href, const char* funct, int line);
 			void die(const char* msg);
 			
 	};
@@ -143,9 +151,9 @@ namespace Mw{
 	class Methods
 	{
 		public:
-			char * _GET(char* param);
+			char * _GET(char* param, ...);
 			char * _POST(const char* param);
-			int i_GET(char param[1025]);
+			int i_GET(char param[1025], ...);
 			void redirect(const char* href);
 	};
 	class Time
@@ -182,6 +190,8 @@ namespace Mw{
 			char * parsing_url(char *s, char* param);
 			int url_isset();
 			int isset(char * mod);
+			void header(char * string);
+			char * _SERVER(char * string);
 	};
 
 }

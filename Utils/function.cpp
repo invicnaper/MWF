@@ -135,3 +135,13 @@ int Mw::Function::isset(char* mod){
 	}
 	/* for _POST methode */
 }
+void Mw::Function::header(char * string){
+	/* must be called before any content drawing */
+	Mw::Utils * utils = new Mw::Utils;
+	try{
+		std::cout << string << "\n\n";
+	}catch(const char * error){
+		utils->error(error,"Header error", "header", __LINE__);
+	}
+	return ;
+}

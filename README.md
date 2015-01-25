@@ -41,6 +41,12 @@ Code Example
 ```
 this will check if the query string exist and then will print the content of the param "a"
 
+Error Handling
+===
+show error type and line of the function that handle this error in the .cpp file 
+
+![alt text](http://naper.eu/blog/content/public/upload/mwf1_0_o.png "mwf error")
+
 Mwf lib 
 ===
 

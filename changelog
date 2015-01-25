@@ -8,11 +8,29 @@
 
 [Changelog]
 
+|24/10/2014|
 
+-Use the setup shell script to setup apache with mwf
+-You can use mwf with mwf_server (a web server written in ruby)
+
+|22/10/2014|
+
+-you can get the sever name , script name by using some define constant like(SERVER_NAME, SERVER_SOFTWARE, ..)
+-Adding some function
+-Exception handling
+
+|21/10/2014|
+
+-_GET and i_GET support multiple variable , and XSS (2:17 AM)
+
+|20/10/2014| 0.0.1
+
+-Fix some Bugs in the _GET function
+-adding some function
+-adding error handling
 
 |Unknown Date|:
 
--adding error handling
 -support many CGI lib
 -support template files (xml or css);
 -Adding time function

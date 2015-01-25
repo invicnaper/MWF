@@ -59,60 +59,87 @@ void Mwu::Frame::__init(const char* title,const char* description){
 	Function: _GET
 	description: get parametre from url
 */
-char * Mw::Methods::_GET(char* param){
+char * Mw::Methods::_GET(char* param, ...){
 	Mw::Utils utils;
 	Mw::Function f;
 	int a = 0,i=0;
 	char *result = NULL;
     char *data = getenv("QUERY_STRING");
     char *parsed = NULL;
-    if(data == NULL)
-    {
-        utils.error("Error with QUERY_STRING","query_string");
-    }
-    parsed = strtok(data,"&");
-	while( parsed ) {
-		result = f.parsing_url(parsed, param);
-		parsed = strtok((char *)0,"&");
-	}
-	if(strstr(result, "m") && strlen(result) == 3){
-    	utils.error("can not found the param ","UNKNOWN_PARAM");
-    }
+    va_list arg; 
+	va_start(arg, param);
 
-    return result;
+	/* parse variable list */
+	try{
+		while(va_arg(arg,char *) != NULL){
+			/* parse the list */
+		}
+
+    	if(data == NULL)
+    	{
+        	utils.error("Error with QUERY_STRING","query_string", "_GET", __LINE__);
+    	}
+    	parsed = strtok(data,"&");
+		while( parsed ) {
+			result = f.parsing_url(parsed, param);
+			parsed = strtok((char *)0,"&");
+		}
+		if(strstr(result, "m") && strlen(result) == 3){
+    		utils.error("can not found the param ","UNKNOWN_PARAM", "_GET", __LINE__);
+    	}
+    	va_end(arg);
+    	return result;
+    }
+    catch(const char *error){
+    	utils.error(error,"UNKNOWN ERROR", "_GET", __LINE__);
+    }
 }
 /*
 	Function: _GET
 	description: get parametre from url ; return int
 */
-int Mw::Methods::i_GET(char param[1025]){
+int Mw::Methods::i_GET(char param[1025], ...){
 	Mw::Utils utils;
 	Mw::Function f;
 	int a = 0,i=0;
 	char *result = NULL;
     char *data = getenv("QUERY_STRING");
     char *parsed = NULL;
-    if(data == NULL)
-    {
-        utils.error("Error with QUERY_STRING","query_string");
+    va_list arg; 
+	va_start(arg, param);
+
+	/* parse variable list */
+	try{
+		while(va_arg(arg,char *) != NULL){
+			/* parse the list */
+		}
+
+    	if(data == NULL)
+    	{
+        	utils.error("Error with QUERY_STRING","query_string", "i_GET", __LINE__);
+    	}
+    	parsed = strtok(data,"&");
+		while( parsed ) {
+			result = f.parsing_url(parsed, param);
+			parsed = strtok((char *)0,"&");
+		}
+    	if(atoi(result) == 0){
+    		utils.error("can not found the param ","UNKNOWN_PARAM", "i_GET", __LINE__);
+    	}
+    	va_end(arg);
+    	return atoi(result);
     }
-    parsed = strtok(data,"&");
-	while( parsed ) {
-		result = f.parsing_url(parsed, param);
-		parsed = strtok((char *)0,"&");
-	}
-    if(atoi(result) == 0){
-    	utils.error("can not found the param ","UNKNOWN_PARAM");
+    catch(const char* error){
+    	utils.error(error,"UNKNOWN ERROR", "i_GET", __LINE__);
     }
-    return atoi(result);
 }
-void Mw::Utils::error(const char* error,const char* href){
+void Mw::Utils::error(const char* error,const char* href, const char* funct, int line){
 	Mw::Template templ;
 	char err_string[1025];
 	sprintf(err_string,"<b>[Error]</b> : %s , Please check ",error);
 	std::cout << "<table class=\"errors\" cellspacing=\"0\" summary=\"errors\">";
 	std::cout << "<tr>";
-	std::cout << "<td class=\"errorDept\" colspan=\"3\">Error</td>";
+	std::cout << "<td class=\"errorDept\" colspan=\"3\">Error : <b>" << funct << "</b> line " << line <<"</td>";
 	std::cout << "</tr>";
 	std::cout << "<td class=\"error\" width=\"25%\"><a href=\"" << href << "\">"<< href <<"</a></td>";
 	std::cout << "<td class=\"error\" width=\"60%\">"<< error << "</td>";
@@ -124,7 +151,14 @@ void Mw::Utils::error(const char* error,const char* href){
 	/* TODO : write logs */
 }
 void Mw::Methods::redirect(const char* href){
-	std::cout << "<META HTTP-EQUIV=refresh CONTENT=\"1;URL='" << href << "'\">\n";
+	//std::cout << "<META HTTP-EQUIV=refresh CONTENT=\"1;URL='" << href << "'\">\n";
+	/* call header function */
+	Mw::Function * funct = new Mw::Function;
+	char * location = NULL;
+	sprintf(location,"Location: %s",href);
+	funct->header(location);
+
+	return ;
 }
 /*
 	Function: __end

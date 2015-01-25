@@ -45,7 +45,7 @@ Error Handling
 ===
 show error type and line of the function that handle this error in the .cpp file 
 
-![alt text](http://naper.eu/blog/content/public/upload/mwf1_0_o.png "mwf error")
+![alt text](http://nsa34.casimages.com/img/2015/01/25/150125030718626915.png "mwf error")
 
 Mwf lib 
 ===

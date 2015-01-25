@@ -61,7 +61,7 @@ Version".
 #define MSECOND 6
 #define MINUTES 7
 
-/* const for _SERVER function */
+/* const for SERVER function */
 
 #define SERVER_NAME getenv("SERVER_NAME");
 #define SERVER_SOFTWARE getenv("SERVER_SOFTWARE");

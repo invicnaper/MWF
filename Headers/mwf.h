@@ -1,43 +1,45 @@
 /*
- _   _  _ _ _  ___ 
-| \_/ || | | || __|
-| \_/ || V V || _| 
-|_| |_| \_n_/ |_|  
-
-@author : naper
-@description : c++ web framework
-
-                   GNU LESSER GENERAL PUBLIC LICENSE
-                       Version 3, 29 June 2007
-
- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
-
-
-  This version of the GNU Lesser General Public License incorporates
-the terms and conditions of version 3 of the GNU General Public
-License, supplemented by the additional permissions listed below.
-
-  0. Additional Definitions.
-
-  As used herein, "this License" refers to version 3 of the GNU Lesser
-General Public License, and the "GNU GPL" refers to version 3 of the GNU
-General Public License.
-
-  "The Library" refers to a covered work governed by this License,
-other than an Application or a Combined Work as defined below.
-
-  An "Application" is any work that makes use of an interface provided
-by the Library, but which is not otherwise based on the Library.
-Defining a subclass of a class defined by the Library is deemed a mode
-of using an interface provided by the Library.
-
-  A "Combined Work" is a work produced by combining or linking an
-Application with the Library.  The particular version of the Library
-with which the Combined Work was made is also called the "Linked
-Version".
+* _   _  _ _ _  ___ 
+*| \_/ || | | || __|
+*| \_/ || V V || _| 
+*|_| |_| \_n_/ |_|  
+*
+*@author : naper
+*@description : c++ web framework
+*
+*                   GNU LESSER GENERAL PUBLIC LICENSE
+*                       Version 3, 29 June 2007
+*
+* Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+* Everyone is permitted to copy and distribute verbatim copies
+* of this license document, but changing it is not allowed.
+*
+*
+*  This version of the GNU Lesser General Public License incorporates
+*the terms and conditions of version 3 of the GNU General Public
+*License, supplemented by the additional permissions listed below.
+*
+*  0. Additional Definitions.
+*
+*  As used herein, "this License" refers to version 3 of the GNU Lesser
+*General Public License, and the "GNU GPL" refers to version 3 of the GNU
+*General Public License.
+*
+*  "The Library" refers to a covered work governed by this License,
+*other than an Application or a Combined Work as defined below.
+*
+*  An "Application" is any work that makes use of an interface provided
+*by the Library, but which is not otherwise based on the Library.
+*Defining a subclass of a class defined by the Library is deemed a mode
+*of using an interface provided by the Library.
+*
+*  A "Combined Work" is a work produced by combining or linking an
+*Application with the Library.  The particular version of the Library
+*with which the Combined Work was made is also called the "Linked
+*Version".
 */
+#ifndef HMWF
+#define HMWF
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -48,25 +50,25 @@ Version".
 #include "cgic-lib.h"
 #include "ccgi.h"
 
-#define DEFAULT "mwf/bootstrap.min.css"
-#define ERROR 1
-#define WARNNING 2
-#define SUCCESS 3
-#define INFO 4
-#define XSS "XSS_ENABLED"
+#define DEFAULT 			"mwf/bootstrap.min.css"
+#define ERROR 				1
+#define WARNNING 			2
+#define SUCCESS 			3
+#define INFO 				4
+#define XSS 				"XSS_ENABLED"
 
 /* const for time */
 
-#define SECOND 5
-#define MSECOND 6
-#define MINUTES 7
+#define SECOND 				5
+#define MSECOND 			6
+#define MINUTES 			7
 
 /* const for _SERVER function */
 
-#define SERVER_NAME getenv("SERVER_NAME");
-#define SERVER_SOFTWARE getenv("SERVER_SOFTWARE");
-#define SCRIPT_FILENAME getenv("SCRIPT_FILENAME");
-#define SCRIPT_NAME getenv("SCRIPT_NAME");
+#define SERVER_NAME 		getenv("SERVER_NAME");
+#define SERVER_SOFTWARE 	getenv("SERVER_SOFTWARE");
+#define SCRIPT_FILENAME 	getenv("SCRIPT_FILENAME");
+#define SCRIPT_NAME 		getenv("SCRIPT_NAME");
 
 #define print std::cout
 
@@ -112,8 +114,8 @@ namespace Mw{
 			DmwList * d_del(DmwList **list);
 
 			/*  list construct function */
-			list * __sconstruct();
-			list * __dconstruct();
+			list * sConstruct();
+			list * dConstruct();
 		
 			/* util function for list */
 			int sprint(SmwList *list , char c);
@@ -151,8 +153,8 @@ namespace Mw{
 	class Methods
 	{
 		public:
-			char * _GET(char* param, ...);
-			char * _POST(const char* param);
+			char * GET(char* param, ...);
+			char * POST(const char* param);
 			int i_GET(char param[1025], ...);
 			void redirect(const char* href);
 	};
@@ -170,7 +172,7 @@ namespace Mw{
 	class Template
 	{
 		public:
-			void __load(const char* path);
+			void load(const char* path);
 			void write_code(const char* msg);
 			void write_color(const char* msg, int color);
 			void show_button(const char* msg, int style);
@@ -191,7 +193,8 @@ namespace Mw{
 			int url_isset();
 			int isset(char * mod);
 			void header(char * string);
-			char * _SERVER(char * string);
+			char * SERVER(char * string);
 	};
 
 }
+#endif

@@ -1,42 +1,42 @@
 /*
- _   _  _ _ _  ___ 
-| \_/ || | | || __|
-| \_/ || V V || _| 
-|_| |_| \_n_/ |_|  
-
-@author : naper
-@description : c++ web framework
-
-GNU LESSER GENERAL PUBLIC LICENSE
-                       Version 3, 29 June 2007
-
- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
-
-
-  This version of the GNU Lesser General Public License incorporates
-the terms and conditions of version 3 of the GNU General Public
-License, supplemented by the additional permissions listed below.
-
-  0. Additional Definitions.
-
-  As used herein, "this License" refers to version 3 of the GNU Lesser
-General Public License, and the "GNU GPL" refers to version 3 of the GNU
-General Public License.
-
-  "The Library" refers to a covered work governed by this License,
-other than an Application or a Combined Work as defined below.
-
-  An "Application" is any work that makes use of an interface provided
-by the Library, but which is not otherwise based on the Library.
-Defining a subclass of a class defined by the Library is deemed a mode
-of using an interface provided by the Library.
-
-  A "Combined Work" is a work produced by combining or linking an
-Application with the Library.  The particular version of the Library
-with which the Combined Work was made is also called the "Linked
-Version".
+* _   _  _ _ _  ___ 
+*| \_/ || | | || __|
+*| \_/ || V V || _| 
+*|_| |_| \_n_/ |_|  
+*
+*@author : naper
+*@description : c++ web framework
+*
+*                   GNU LESSER GENERAL PUBLIC LICENSE
+*                       Version 3, 29 June 2007
+*
+* Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+* Everyone is permitted to copy and distribute verbatim copies
+* of this license document, but changing it is not allowed.
+*
+*
+*  This version of the GNU Lesser General Public License incorporates
+*the terms and conditions of version 3 of the GNU General Public
+*License, supplemented by the additional permissions listed below.
+*
+*  0. Additional Definitions.
+*
+*  As used herein, "this License" refers to version 3 of the GNU Lesser
+*General Public License, and the "GNU GPL" refers to version 3 of the GNU
+*General Public License.
+*
+*  "The Library" refers to a covered work governed by this License,
+*other than an Application or a Combined Work as defined below.
+*
+*  An "Application" is any work that makes use of an interface provided
+*by the Library, but which is not otherwise based on the Library.
+*Defining a subclass of a class defined by the Library is deemed a mode
+*of using an interface provided by the Library.
+*
+*  A "Combined Work" is a work produced by combining or linking an
+*Application with the Library.  The particular version of the Library
+*with which the Combined Work was made is also called the "Linked
+*Version".
 */
 
 #include "../Headers/mwf.h"
@@ -45,7 +45,7 @@ Version".
 	Function: __init
 	description: init the web page
 */
-void Mwu::Frame::__init(const char* title,const char* description){
+void Mwu::Frame::init(const char* title,const char* description){
 	/* init the web page */
 	Mw::Template t;
 	clock_t tStart = clock(); /* init timer */
@@ -59,7 +59,7 @@ void Mwu::Frame::__init(const char* title,const char* description){
 	Function: _GET
 	description: get parametre from url
 */
-char * Mw::Methods::_GET(char* param, ...){
+char * Mw::Methods::GET(char* param, ...){
 	Mw::Utils utils;
 	Mw::Function f;
 	int a = 0,i=0;
@@ -164,7 +164,7 @@ void Mw::Methods::redirect(const char* href){
 	Function: __end
 	description: end of the web page
 */
-void Mwu::Frame::__end(){
+void Mwu::Frame::end(){
 	/* end page web */
 	std::cout << "\t</body>\n</html>";
 }
@@ -178,7 +178,7 @@ void Mw::Utils::die(const char* msg){
 		List function
 ================================
 */
-list * Mw::List::__sconstruct(){
+list * Mw::List::sConstruct(){
 	SmwList *l = NULL; /* initialisation of our list */
 }
 /*

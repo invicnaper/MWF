@@ -13,9 +13,9 @@ namespace Mwu{
 	class Frame
 	{
 		public:
-			void __init(const char* title,const char* description);
-			void __load(const char *module);
-			void __end();
+			void init(const char* title,const char* description);
+			void fload(const char *module);
+			void end();
 	};
 
 }

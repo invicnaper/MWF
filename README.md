@@ -28,14 +28,14 @@ Code Example
         Mw::Methods m;
         Mw::Function funct;
         int a ;
-        frame.__init("Param testing","Description");
+        frame.init("Param testing","Description");
         if(funct.url_isset()){
                 a = m.i_GET("a");
                 print << "a = " << a ; 
         }else{
                 print << "<b>no param</b>";
         }
-        frame.__end();
+        frame.end();
         return 0;
     }
 ```

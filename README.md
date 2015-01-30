@@ -61,9 +61,9 @@ Documentation
 
 ##Mwu::Frame
 ```c
-    void 	__init (const char *title, const char *description)
-    void 	__load (const char *module)
-    void 	__end ()
+    void 	init (const char *title, const char *description)
+    void 	fload (const char *module)
+    void 	end ()
 ```
 ##Mw::List
 ```c
@@ -71,8 +71,8 @@ Documentation
     DmwList * 	d_init (DmwList **list)
     SmwList * 	s_del (SmwList *list)
     DmwList * 	d_del (DmwList **list)
-    list * 	__sconstruct ()
-    list * 	__dconstruct ()
+    list * 	sConstruct ()
+    list * 	dConstruct ()
     int 	sprint (SmwList *list, char c)
     int 	dprint (DmwList **list, char *string)
     int 	sexec (SmwList *list)
@@ -100,8 +100,8 @@ Documentation
 ```    
 ##Mw::Methods
 ```c
-    char * 	_GET (char *param)
-    char * 	_POST (const char *param)
+    char * 	GET (char *param)
+    char * 	POST (const char *param)
     int 	i_GET (char param[1025])
     void 	redirect (const char *href)
 ```    

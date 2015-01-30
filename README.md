@@ -23,7 +23,7 @@ Code Example
 ```c++
     #include "mwf.h"
     int main(){
-        Mwu::Frame frame("Param testing, "description");
+        Mwu::Frame frame("Param testing", "description");
         Mw::Html html;
         Mw::Methods m;
         Mw::Function funct;

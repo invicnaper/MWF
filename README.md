@@ -23,19 +23,17 @@ Code Example
 ```c++
     #include "mwf.h"
     int main(){
-        Mwu::Frame frame;
+        Mwu::Frame frame("Param testing, "description");
         Mw::Html html;
         Mw::Methods m;
         Mw::Function funct;
         int a ;
-        frame.init("Param testing","Description");
         if(funct.url_isset()){
                 a = m.i_GET("a");
                 print << "a = " << a ; 
         }else{
                 print << "<b>no param</b>";
         }
-        frame.end();
         return 0;
     }
 ```

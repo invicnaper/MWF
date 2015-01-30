@@ -62,6 +62,8 @@ Documentation
     void 	init (const char *title, const char *description)
     void 	fload (const char *module)
     void 	end ()
+    Frame(const char* title, const char * descr);
+	~Frame();
 ```
 ##Mw::List
 ```c

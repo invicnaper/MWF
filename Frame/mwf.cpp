@@ -51,9 +51,9 @@ void Mwu::Frame::init(const char* title,const char* description){
 	clock_t tStart = clock(); /* init timer */
 	std::cout << "Content-Type: text/html;\n\n";
 	std::cout << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" >\n\t<head>";
-    std::cout << "\t\t<title>"<< title <<"</title>";
-    std::cout << "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n\t</head>\n\t<body>";
-    t.errorStyle();
+    	std::cout << "\t\t<title>"<< title <<"</title>";
+    	std::cout << "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n\t</head>\n\t<body>";
+    	t.errorStyle();
 }
 /*
 	Function: _GET
@@ -64,9 +64,9 @@ char * Mw::Methods::GET(char* param, ...){
 	Mw::Function f;
 	int a = 0,i=0;
 	char *result = NULL;
-    char *data = getenv("QUERY_STRING");
-    char *parsed = NULL;
-    va_list arg; 
+    	char *data = getenv("QUERY_STRING");
+    	char *parsed = NULL;
+    	va_list arg; 
 	va_start(arg, param);
 
 	/* parse variable list */
@@ -103,9 +103,9 @@ int Mw::Methods::i_GET(char param[1025], ...){
 	Mw::Function f;
 	int a = 0,i=0;
 	char *result = NULL;
-    char *data = getenv("QUERY_STRING");
-    char *parsed = NULL;
-    va_list arg; 
+    	char *data = getenv("QUERY_STRING");
+    	char *parsed = NULL;
+    	va_list arg; 
 	va_start(arg, param);
 
 	/* parse variable list */

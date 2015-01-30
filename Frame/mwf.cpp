@@ -42,7 +42,7 @@
 #include "../Headers/mwf.h"
 
 /*
-	Function: __init
+	Function: init
 	description: init the web page
 */
 void Mwu::Frame::init(const char* title,const char* description){
@@ -161,7 +161,7 @@ void Mw::Methods::redirect(const char* href){
 	return ;
 }
 /*
-	Function: __end
+	Function: end
 	description: end of the web page
 */
 void Mwu::Frame::end(){

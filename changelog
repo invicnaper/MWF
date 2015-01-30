@@ -8,6 +8,10 @@
 
 [Changelog]
 
+|30/01/2015|
+
+-Adding constructor and destructor for frame
+
 |24/10/2014|
 
 -Use the setup shell script to setup apache with mwf
